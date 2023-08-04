@@ -1,3 +1,9 @@
+// install npm yargs
+// npm init -y
+// npm install yargs
+
+
+
 const yargs = require('yargs');
 const readline = require('readline').createInterface({
   input: process.stdin,
@@ -36,3 +42,11 @@ function main() {
 }
 
 main();
+
+
+// For Uppercase 
+// node convertCase.js --case U
+
+
+//  for lowercase
+// node convertCase.js --case L
