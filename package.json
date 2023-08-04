@@ -1,0 +1,16 @@
+{
+  "name": "phplaravel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "convertCase.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "yards": "^0.1.4",
+    "yargs": "^17.7.2"
+  }
+}

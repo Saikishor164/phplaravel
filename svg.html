@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SVG Animated Pattern</title>
+    <style>
+        #svg-container {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="svg-container">
+        <svg id="svg" width="400" height="400">
+        </svg>
+    </div>
+    <script>
+        function drawSVGCircle(svg, x, y, radius, color) {
+            const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            circle.setAttribute("cx", x);
+            circle.setAttribute("cy", y);
+            circle.setAttribute("r", radius);
+            circle.setAttribute("fill", color);
+            svg.appendChild(circle);
+        }
+        function getRandomColor() {
+            const letters = "0123456789ABCDEF";
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        function animateSVG() {
+            const svgContainer = document.getElementById("svg");
+            svgContainer.innerHTML = "";
+            for (let i = 0; i < 10; i++) {
+                const x = Math.random() * 400;
+                const y = Math.random() * 400;
+                const radius = Math.random() * 30 + 10;
+                const color = getRandomColor();
+                drawSVGCircle(svgContainer, x, y, radius, color);
+            }
+            setTimeout(animateSVG, 1000);
+        }
+        animateSVG();
+    </script>
+</body>
+</html>
